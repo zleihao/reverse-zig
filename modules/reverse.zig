@@ -28,3 +28,10 @@ pub fn Reverse() type {
         }
     };
 }
+
+test "Test data in reverse order" {
+    const reverse = Reverse();
+
+    try std.testing.expectEqual(0x6a, reverse.reverse_byte(0x56));
+    try std.testing.expectEqual(0xa5a55a5a, reverse.reverse_word(0x5a5aa5a5));
+}
